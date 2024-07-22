@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <h1 class="head">Quiz</h1>
+            <div class="questiondiv">
+                <h1>In web design, what does CSS stand for?</h1>
+                <div class="option1" onclick="wronganswer(0)">
+                    <button class="distinct">A</button>
+                    <button class="unique">Counter Strike Source</button>
+                </div>
+                <div class="option2" onclick="wronganswer(1)">
+                    <button class="distinct">B</button>
+                    <button class="unique">Corrective Style Sheet</button>
+                </div>
+                <div class="option3" onclick="wronganswer(2)">
+                    <button class="distinct">C</button>
+                    <button class="unique">Computer style sheet</button>
+                </div>
+                <div class="option4" onclick="correctanswer()">
+                    <button class="distinct" >D</button>
+                    <button class="unique">Cascading Style Sheet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function wronganswer(ele){
+            var clr = document.getElementsByClassName("distinct")[ele].style.backgroundColor="red";
+            var clr1 = document.getElementsByClassName("unique")[ele].style.backgroundColor="red";
+        }
+        function correctanswer(){
+            var clr = document.getElementsByClassName("distinct")[3].style.backgroundColor="green";
+            var clr1 = document.getElementsByClassName("unique")[3].style.backgroundColor="green";
+        }
+    </script>
+</body>
+</html>
